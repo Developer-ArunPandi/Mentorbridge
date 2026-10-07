@@ -5,19 +5,15 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
-
-    const form = new FormData(e.target);
-
-    const data = {
-      Name: form.get("Name"),
-      Email: form.get("Email"),
-      Phone: form.get("Phone"),
-      City: form.get("City"),
-      Gender: form.get("Gender"),
-      Terms: Boolean(form.get("Terms")), 
-    };
-
-    setSubmittedData(data); 
+    const form=e.target;
+    setSubmittedData({
+      Name: form.Name.value,
+      Email: form.Email.value,
+      Phone: form.Phone.value,
+      City: form.City.value,
+      Gender: form.Gender.value,
+      Terms: form.Terms.checked, 
+    }); 
   };
 
   return (
