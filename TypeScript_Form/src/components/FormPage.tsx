@@ -68,8 +68,6 @@ const FormPage = () => {
                     onChange={handleChange}
                     required
                 />
-
-                {/* MUI Select Dropdown for Gender */}
                 <TextField
                     name="gender"
                     select
@@ -84,7 +82,6 @@ const FormPage = () => {
                     <MenuItem value="Other">Other</MenuItem>
                 </TextField>
 
-                {/* MUI Checkbox for Terms & Conditions */}
                 <FormControlLabel
                     control={
                         <Checkbox
