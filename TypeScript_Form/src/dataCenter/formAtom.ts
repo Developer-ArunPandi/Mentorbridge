@@ -3,11 +3,17 @@ import { atom } from 'jotai';
 export interface IUserFormType {
   name: string;
   email: string;
-  age: number | "";
+  phoneNumber: number | "";
+  city: string;
+  gender: string;
+  termsAndConditions: boolean; 
 }
 
 export const userFormAtom = atom<IUserFormType>({
-  name: '',
-  email: '',
-  age: "",
+  name: "",
+  email: "",
+  phoneNumber: "",
+  city: "",
+  gender: "",
+  termsAndConditions: false, 
 });
